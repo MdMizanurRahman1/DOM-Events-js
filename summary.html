@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event handeler</title>
+</head>
+
+<body>
+    <h1>Welcome to the common two event handelers</h1>
+    <h3 id="simple-text">love the way to work</h3>
+    <p id="input-text">Input text</p>
+    <input type="text" name="" id="input-field">
+    <button id="update-btn">Update</button>
+
+    <br>
+    <br>
+
+    <button onclick="handelesId()">Event handeler</button>
+    <button id="event-listener">event listener</button>
+
+
+    <script>
+        function handelesId() {
+            const finalone = document.getElementById('simple-text');
+            finalone.innerText = 'please change the onclick when it is clicked';
+        }
+        document.getElementById('event-listener').addEventListener('click', function () {
+            const finalone = document.getElementById('simple-text');
+            finalone.innerText = 'please change the eventlister when it is clicked';
+        })
+
+        document.getElementById('update-btn').addEventListener('click', function () {
+            const inputField = document.getElementById('input-field');
+            const inputText = inputField.value;
+            const p = document.getElementById('input-text');
+            p.innerText = inputText;
+            inputField.value = '';
+        })
+    </script>
+</body>
+
+</html>
